@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --light-color: #E9E4D3;
+    --dark-color: #23272F;
+    --white-color: #EEEEEE;
+    --heading-font: "Abril Fatface", cursive;
+    --content-font: "Montserrat", sans-serif;
+}
+
+
+/* ////////////////////
+////global styles////
+///////////////////// */
+
+body {
+    font-family: var(--content-font);
+}
+
+section {
+    min-height: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+}
+
+section:nth-child(2n-1) {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+section:nth-child(2n) {
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 4.5rem;
+    line-height: 4.4rem;
+    height: 8rem;
+    width: 39.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--dark-color);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    line-height: 3.4rem;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    height: 4px;
+    width: 30%;
+    background: var(--white-color);
+}
+
+.heading--active::before {
+    background: var(--dark-color);
+}
+
+div {
+    max-width: 43.75rem;
+    padding: 0rem 2rem;
+}
+
+p {
+    max-width: 43.75rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+
+/* //////////////
+//utility classes///
+///////////// */
+
+.dark-bg {
+    background: var(--dark-color);
+}
+
+.light-bg {
+    background: var(--light-color);
+}
+
+.white-clr {
+    color: var(--white-color);
+}
+
+.dark-clr {
+    color: var(--dark-color);
+}
+
+
+/* 
+//////
+///media-screens////
+//////////// */
+
+@media screen and (max-width:750px) {
+     :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:530px) {
+     :root {
+        font-size: 9px;
+    }
+    p {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+     :root {
+        font-size: 8px;
+    }
+}
